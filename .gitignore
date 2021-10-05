@@ -128,4 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# pc-model-labeling
 SqueezeSegV3
+unlabeled_data
+output
