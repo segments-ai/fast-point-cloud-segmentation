@@ -92,15 +92,11 @@ def get_kitti_attributes():
 
 
 def run_model(dataset_path, output_path):
-    dataset_path = os.path.join(os.path.abspath(sys.path[0]), dataset_path)
-    output_path = os.path.join(os.path.abspath(sys.path[0]), output_path)
-    model_path = os.path.join(os.path.abspath(sys.path[0]), "SSGV3-53")
-    script_path = os.path.join(
-        os.path.abspath(sys.path[0]), "SqueezeSegV3/src/tasks/semantic/demo.py"
-    )
-    wd_path = os.path.join(
-        os.path.abspath(sys.path[0]), "SqueezeSegV3/src/tasks/semantic"
-    )
+    dataset_path = os.path.abspath(dataset_path)
+    output_path = os.path.abspath(output_path)
+    model_path = os.path.abspath("SSGV3-53")
+    script_path = os.path.abspath("SqueezeSegV3/src/tasks/semantic/demo.py")
+    wd_path = os.path.abspath("SqueezeSegV3/src/tasks/semantic")
 
     subprocess.call(
         [
